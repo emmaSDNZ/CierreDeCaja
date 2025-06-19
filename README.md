@@ -264,7 +264,7 @@ WITH ventas_filtradas AS (
     CAST(fven AS INT64) AS fven,
     ftotal
   FROM
-    tu_dataset.tu_tabla
+    rcaja_02.tu_tabla
   WHERE
     fven IS NOT NULL AND ffch IS NOT NULL
 ),
@@ -305,7 +305,7 @@ WITH ventas_filtradas AS (
     EXTRACT(MONTH FROM ffch) AS mes,
     CAST(fven AS INT64) AS fven,
     ftotal
-  FROM tu_dataset.tu_tabla
+  FROM rcaja_02.fven
   WHERE fven IS NOT NULL AND ffch IS NOT NULL
 ),
 ventas_con_estacion AS (
@@ -342,7 +342,7 @@ WITH ventas_filtradas AS (
     fneto,
     EXTRACT(YEAR FROM ffch) AS anio,
     EXTRACT(MONTH FROM ffch) AS mes
-  FROM tu_dataset.tu_tabla
+  FROM rcaja_02.fart
   WHERE fneto IS NOT NULL AND ffch IS NOT NULL
 ),
 ventas_con_estacion AS (
@@ -464,3 +464,5 @@ SELECT * FROM top_productos_estacion ORDER BY estacion, venta_total DESC;
   Fecha Completa = DATE([año], [mes], 1)
   ```
 
+#   - r e n d i m i e n t o - v e n t a s - p o w e r b i - b i g q u e r y  
+ 
