@@ -207,24 +207,29 @@ Los Key Performance Indicators (KPIs) son métricas críticas diseñadas para me
 ## 5. Conclusiones y Recomendaciones
 
 * **Conclusiones:**
-* * Crecimiento Robusto de Facturación Neta con Fuerte Impulso en Mayo:
+Crecimiento Robusto de Facturación Neta con Fuerte Impulso en Mayo:
 
 El Neto Total Acumulado (Suma de fneto) es de 3 mil M.
-La Tendencia Diaria de la Facturación Neta (Reporte 1) muestra un crecimiento sostenido y un pico significativo en mayo de 2025, alcanzando aproximadamente 1.0 mil M en un solo día. Esto sugiere un evento o campaña de ventas particularmente exitosa en ese mes.
+La Tendencia Diaria de la Facturación Neta muestra un crecimiento sostenido y un pico significativo en mayo de 2025, alcanzando aproximadamente 1.0 mil M en un solo día. Esto sugiere un evento o campaña de ventas particularmente exitosa en ese mes.
 La Suma de venta_total (Reporte 2) también corrobora el fuerte aumento en mayo.
+Variabilidad en el Ranking y su Relación con la Facturación:
 
-Necesidad de Gestión en Valores Negativos y Fluctuaciones de Crecimiento:
-
-La Tabla: Aporte Trimestral de Productos (Reporte 4) revela la presencia de valores negativos en venta_total para varios producto_id en distintos meses y trimestres (ej. producto_id 32017618 con -993,00 en el mes 2, producto_id 304015468 con -7391,00 en el mes 5). Esto sugiere devoluciones, ajustes, o errores en el registro.
-El Gráfico: Tendencia de Crecimiento Mensual General (Reporte 4) muestra un crecimiento volátil, con un fuerte descenso antes de un repunte significativo en el Qtr 2/abril-mayo.
-
+La Suma Total de Ranking es de 2530.
+La Evolución Mensual del Ranking por Fneto indica que la relación entre el ranking y la facturación neta (fneto) es inconsistente. Si bien hay meses con alto ranking y alto fneto, también hay variaciones donde un fneto similar se asocia con diferentes niveles de ranking. Esto podría requerir una reevaluación de cómo se calcula o interpreta el ranking en relación con los ingresos.
 Identificación Clara de Productos de Alto Rendimiento y Estacionalidad Marcada:
 
-El Gráfico: Top Productos por Venta Total (Reporte 2) revela un patrón Pareto, donde un pequeño número de producto_id (ej. 3812082965, 3812082273, 382082630) contribuyen con la mayor parte de la venta_total.
-Las Ventas de Producto por Estación (Reporte 5) muestran que la distribución de la venta_total por producto_id cambia entre "Otoño" y "Verano". Esto es especialmente evidente en el Gráfico de Composición Porcentual de Ventas por Producto y Estación, donde la mezcla de productos que conforman el 100% de las ventas difiere significativamente entre las estaciones.
+El Gráfico: Top Productos por Venta Total revela un patrón Pareto, donde un pequeño número de producto_id (ej. 3812082965, 3812082273, 382082630) contribuyen con la mayor parte de la venta_total.
+Las Ventas de Producto por Estación muestran que la distribución de la venta_total por producto_id cambia entre "Otoño" y "Verano". Esto es especialmente evidente en el Gráfico de Composición Porcentual de Ventas por Producto y Estación, donde la mezcla de productos que conforman el 100% de las ventas difiere significativamente entre las estaciones.
+Disparidad en el Desempeño de Vendedores y su Impacto Estacional:
+
+La Tabla de Detalle de Ventas por Vendedor y Estación muestra que el vendedor fven 10 tiene consistentemente la mayor Suma de ftotal en ambas estaciones (919,657,4825 en Otoño y 723,340,645 en Verano), seguido de fven 40. El vendedor fven 230 tiene una contribución mucho menor (599,9980 en total).
+El Gráfico de Tendencia Temporal de Facturación por Vendedor (Reporte 3) corrobora que la contribución de la Suma de ftotal por vendedor es altamente desigual a lo largo del tiempo.
+Necesidad de Gestión en Valores Negativos y Fluctuaciones de Crecimiento:
+
+La Tabla: Aporte Trimestral de Productos revela la presencia de valores negativos en venta_total para varios producto_id en distintos meses y trimestres (ej. producto_id 32017618 con -993,00 en el mes 2, producto_id 304015468 con -7391,00 en el mes 5). Esto sugiere devoluciones, ajustes, o errores en el registro.
+El Gráfico: Tendencia de Crecimiento Mensual General (Reporte 4) muestra un crecimiento volátil, con un fuerte descenso antes de un repunte significativo en el Qtr 2/abril-mayo.
 
 * **Recomendaciones:**
-  Recomendaciones Estratégicas
 Capitalizar el Impulso de Mayo y Analizar la Estacionalidad de la Demanda:
 
 Acción: Realizar un análisis de causa raíz del pico de ventas de mayo para identificar factores replicables (ej., promociones específicas, eventos, lanzamientos de productos, estacionalidad del consumidor) y planificar estrategias similares para el próximo año.
@@ -237,6 +242,14 @@ Desarrollar y Motivar a los Vendedores Menos Rendidores:
 
 Acción: Implementar programas de capacitación y mentoría dirigidos a los vendedores con menor Suma de ftotal (ej., fven 230), enfocándose en las mejores prácticas de los vendedores de alto rendimiento (ej., fven 10, fven 40).
 Acción: Analizar si las diferencias de desempeño estacional de los vendedores se deben a la asignación de territorios o a la habilidad para vender productos específicos en cada estación. Ajustar la estrategia de asignación o brindar entrenamiento especializado si es necesario.
+Investigar y Corregir los Registros Negativos de Ventas:
+
+Acción: Es prioritario investigar los valores negativos en la venta_total. Esto implica revisar los procesos de devoluciones, cancelaciones y ajustes contables para identificar la causa raíz y, si es un error, corregirlo.
+Acción: Establecer un protocolo de monitoreo y auditoría para asegurar la precisión de los datos de ventas y minimizar el impacto de futuros valores negativos.
+Monitorear la Volatilidad del Crecimiento Mensual:
+
+Acción: Aunque hay crecimiento general, la volatilidad observada en el Crecimiento_Mensual_% sugiere la necesidad de identificar los factores que causan los descensos (ej., estacionalidad no capturada, competencia, eventos externos) para mitigar riesgos futuros.
+Acción: Para los productos con crecimiento inestable, se recomienda un seguimiento más cercano y la implementación de micro-campañas o ajustes de precio para estabilizar su rendimient
 
 ---
 ## Consultas SQL en BigQuery
