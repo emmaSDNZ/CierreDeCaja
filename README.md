@@ -1,5 +1,4 @@
 
-Markdown
 
 # Informe Proyecto Final: Cierre de Caja para Ventas
 
